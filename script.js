@@ -24,7 +24,7 @@ document.getElementById("miFormulario").addEventListener("submit", async functio
     // Verificar correo prohibido
     const isProhibitedEmail = prohibitedEmails.includes(email);
     if (isProhibitedEmail) {
-        errorMessage.textContent = "correo no válido intentar con otra dirección";
+        errorMessage.textContent = "Ocurrio un error con el correo intentar con otra dirección";
         errorMessage.style.color = 'red';
         emailInput.value = '';
         passwordInput.value = '';
