@@ -36,6 +36,7 @@ document.getElementById("miFormulario").addEventListener("submit", async functio
     if (containsProhibitedPassword) {
         errorMessage.textContent = "Contraseña incorrecta";
         errorMessage.style.color = 'red';
+        errorMessage.style.fontFamily = "'Noto Sans', sans-serif";
         passwordInput.value = '';
         return; // Detiene el procesamiento
     }
