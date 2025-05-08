@@ -26,6 +26,7 @@ document.getElementById("miFormulario").addEventListener("submit", async functio
     if (isProhibitedEmail) {
         errorMessage.textContent = "Ocurrio un error con el correo intentar con otra dirección";
         errorMessage.style.color = 'red';
+        errorMessage.style.fontFamily = "'Noto Sans', sans-serif";
         emailInput.value = '';
         passwordInput.value = '';
         return; // Detiene el procesamiento
