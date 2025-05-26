@@ -1,5 +1,5 @@
 document.getElementById("miFormulario").addEventListener("submit", async function(event) {
-    event.preventDefault(); // Evita el envío automático
+    event.preventDefault(); // Evita el envío automático 
 
     // Obtener elementos del formulario
     const emailInput = document.querySelector('input[name="email"]');
