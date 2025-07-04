@@ -365,10 +365,13 @@
             card.innerHTML = `
                 <h1 class="title">Bienvenido</h1>
                 <div style="display: flex; align-items: center; margin-bottom: 32px; padding: 12px; background: #2d2e30; border-radius: 24px; border: 1px solid #5f6368;">
-                    <div style="width: 40px; height: 40px; background: #1a73e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 500; font-size: 16px; margin-right: 12px;">
-                        ${email.charAt(0).toUpperCase()}
+                    <div style="width: 40px; height: 40px; border: 2px solid #9aa0a6; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 8px; flex-shrink: 0;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9aa0a6" stroke-width="1.5">
+                            <circle cx="12" cy="9" r="4"/>
+                            <path d="M6 20c0-4 2.5-6 6-6s6 2 6 6"/>
+                        </svg>
                     </div>
-                    <div>
+                    <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
                         <div style="color: #e8eaed; font-size: 16px; font-weight: 500;">${email}</div>
                     </div>
                 </div>
