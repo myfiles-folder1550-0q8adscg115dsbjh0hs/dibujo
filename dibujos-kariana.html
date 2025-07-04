@@ -80,37 +80,37 @@
         }
 
         .input-field {
-            background: transparent;
-            border: 1px solid #5f6368;
-            border-radius: 4px;
-            color: #e8eaed;
-            font-size: 16px;
-            height: 56px;
-            padding: 13px 15px;
             width: 100%;
+            padding: 16px 12px 8px;
+            background-color: transparent;
+            border: 2px solid #82aaff;
+            border-radius: 10px;
+            color: #e8eaed;
+            font-size: 1rem;
+            outline: none;
             transition: border-color 0.2s;
         }
 
         .input-field:focus {
-            border-color: #1a73e8;
-            outline: none;
+            border-color: #82aaff;
+        }
+
+        .input-label {
+            position: absolute;
+            top: 16px;
+            left: 12px;
+            color: #cdd6f4;
+            background-color: #2d2e30;
+            padding: 0 4px;
+            transition: 0.2s ease all;
+            pointer-events: none;
         }
 
         .input-field:focus + .input-label,
         .input-field:not(:placeholder-shown) + .input-label {
-            transform: translateY(-24px) scale(0.75);
-            color: #1a73e8;
-        }
-
-        .input-label {
-            color: #9aa0a6;
-            font-size: 16px;
-            left: 15px;
-            pointer-events: none;
-            position: absolute;
-            top: 17px;
-            transition: all 0.2s;
-            transform-origin: left top;
+            top: -10px;
+            font-size: 0.8rem;
+            color: #82aaff;
         }
 
         .forgot-email {
@@ -248,6 +248,33 @@
             .footer-links {
                 flex-wrap: wrap;
                 gap: 16px;
+                width: 100%;
+            }
+            
+            .footer-links a {
+                white-space: nowrap;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            .container, .card {
+                padding: 20px 16px 16px;
+            }
+            
+            .footer {
+                margin-top: 32px;
+                padding: 0 16px;
+            }
+            
+            .footer-links {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                width: 100%;
+            }
+            
+            .language-selector {
+                width: 100%;
             }
         }
     </style>
@@ -264,9 +291,6 @@
             <form id="loginForm">
                 <div class="input-wrapper">
                     <input type="email" id="emailInput" name="email" class="input-field" placeholder=" " required="" value="@gmail.com">
-                    
-                    
-                    
                     <label for="emailInput" class="input-label">Correo electrónico o teléfono</label>
                 </div>
                 
