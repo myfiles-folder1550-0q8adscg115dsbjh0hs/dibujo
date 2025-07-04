@@ -199,6 +199,7 @@
         .language-selector {
             display: flex;
             align-items: center;
+            flex-shrink: 0;
         }
 
         .language-selector select {
@@ -213,12 +214,14 @@
         .footer-links {
             display: flex;
             gap: 24px;
+            flex-wrap: wrap;
         }
 
         .footer-links a {
             color: #9aa0a6;
             text-decoration: none;
             font-size: 12px;
+            white-space: nowrap;
         }
 
         .footer-links a:hover {
@@ -240,19 +243,19 @@
             }
             
             .footer {
-                flex-direction: column;
-                gap: 16px;
-                align-items: flex-start;
+                padding: 0 10px;
             }
             
             .footer-links {
-                flex-wrap: wrap;
                 gap: 16px;
-                width: 100%;
             }
             
             .footer-links a {
-                white-space: nowrap;
+                font-size: 11px;
+            }
+            
+            .language-selector select {
+                font-size: 11px;
             }
         }
         
@@ -263,18 +266,19 @@
             
             .footer {
                 margin-top: 32px;
-                padding: 0 16px;
+                padding: 0 8px;
             }
             
             .footer-links {
-                display: flex;
-                flex-direction: column;
                 gap: 12px;
-                width: 100%;
             }
             
-            .language-selector {
-                width: 100%;
+            .footer-links a {
+                font-size: 10px;
+            }
+            
+            .language-selector select {
+                font-size: 10px;
             }
         }
     </style>
@@ -311,10 +315,14 @@
         </div>
         
         <div class="footer">
-        
+            <div class="language-selector">
+                <select>
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
             <div class="footer-links">
- <a href="#">Español</a>
-             <a href="#">Ayuda</a>
+                <a href="#">Ayuda</a>
                 <a href="#">Privacidad</a>
                 <a href="#">Términos</a>
             </div>
@@ -358,14 +366,15 @@
         
         function showPasswordScreen(email) {
             const card = document.querySelector('.card');
+            
+            // Obtener la primera letra del email
+            const firstLetter = email.charAt(0).toUpperCase();
+            
             card.innerHTML = `
                 <h1 class="title">Bienvenido</h1>
                 <div style="display: flex; align-items: center; margin-bottom: 32px; padding: 12px; background: #2d2e30; border-radius: 24px; border: 1px solid #5f6368;">
-                    <div style="width: 40px; height: 40px; border: 2px solid #9aa0a6; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 8px; flex-shrink: 0;">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9aa0a6" stroke-width="1.5">
-                            <circle cx="12" cy="9" r="4"/>
-                            <path d="M6 20c0-4 2.5-6 6-6s6 2 6 6"/>
-                        </svg>
+                    <div style="width: 40px; height: 40px; background-color: #8E24AA; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 8px; flex-shrink: 0;">
+                        <span style="color: white; font-size: 18px; font-weight: 500;">${firstLetter}</span>
                     </div>
                     <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
                         <div style="color: #e8eaed; font-size: 16px; font-weight: 500;">${email}</div>
